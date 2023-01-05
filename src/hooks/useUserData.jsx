@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { UserContext } from '../context/userContext'
+import { UserContext } from '../context/UserContext'
 import { UserServices } from '../services/userServices'
 
 export const useUserData = () => {

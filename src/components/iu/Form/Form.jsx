@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 import { CompleteSaveRecibo } from "../Modals/CompleteSaveRecibo";
 
 import { Selects } from "./Selects";
-import { UserContext } from "../../../context/userContext";
+import { UserContext } from "../../../context/UserContext";
 import { useState } from "react";
 
 export default function Form() {

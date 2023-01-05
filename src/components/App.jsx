@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter, HashRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import AppRecibos from "../routes/AppRecibos";
 
@@ -12,7 +12,7 @@ import { Login } from "../routes/Login";
 import { Registro } from "../routes/Registro";
 import { RecoveyPassword } from "../routes/RecoveyPassword";
 import { ChangePassword } from "../routes/ChangePassword";
-import { UserContextProvider } from "../context/userContext";
+import { UserContextProvider } from "../context/UserContext";
 
 export default function App() {
   return (

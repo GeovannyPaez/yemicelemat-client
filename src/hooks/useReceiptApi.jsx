@@ -1,6 +1,6 @@
 import  { useEffect, useState , useContext} from "react";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../context/userContext";
+import { UserContext } from "../context/UserContext";
 const URL_CLOUD = "https://api.cloudinary.com/v1_1/dad87vqdp/image/upload";
 import ReceiptsServices from "../services/receiptServices";
 const initialOption={

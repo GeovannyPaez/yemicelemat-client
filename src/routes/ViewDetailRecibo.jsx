@@ -1,5 +1,5 @@
 import React, {  useReducer,useEffect  } from "react";
-import {  Button, Spinner } from "react-bootstrap";
+import {   Spinner } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { useParams } from "react-router-dom";
 import { useReceiptApi } from "../hooks/useReceiptApi";

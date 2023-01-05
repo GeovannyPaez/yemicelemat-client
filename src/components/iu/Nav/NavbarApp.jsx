@@ -2,7 +2,7 @@ import React from 'react'
 import { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import { UserContext } from '../../../context/userContext';
+import { UserContext } from '../../../context/UserContext';
 import { NavLogueado } from './NavLogueado';
 import { NavNotLogueado } from './NavNotLogueado';
 export default function NavbarApp() {
