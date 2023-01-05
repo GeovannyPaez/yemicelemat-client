@@ -24,7 +24,7 @@ export function ViewDetailRecibo() {
   return (
     <>
         <div className="row">
-          <div className="col-md-7 col-sm-10 m-auto ">
+          <div className="col-md-5 col-sm-10 m-auto ">
             <Card className=" mt-5 detailReceipt ">
               {loading ? <Spinner animation="border"/> : <CarBody receipt={receipt} setRefresh={setRefresh} uploadVoucher={uploadVoucher} deleteReceipt={onDeleteReceipt}/>}
             </Card>
