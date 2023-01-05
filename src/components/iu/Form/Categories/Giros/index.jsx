@@ -28,7 +28,7 @@ const Giros=()=>{
                     <option value="Su Red">Su Red</option>
                     <option value="Efecty">Efecty</option>
                 </select>
-                <label htmlFor="entidadGiro">Entnamead</label>
+                <label htmlFor="entidadGiro">Entidad</label>
             </div>
         </>
     )
