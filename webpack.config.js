@@ -4,7 +4,7 @@ const miniCssExtractPlugin= require('mini-css-extract-plugin');
 const Dotevn= require('dotenv-webpack');
 
 module.exports={
-    entry:'src/index.js',
+    entry:'./src/index.js',
     output:{
         path: path.resolve(__dirname,'dist'),
         filename:'bundle.js',
@@ -44,7 +44,7 @@ module.exports={
     plugins:[
         new htmlWebpackPlugin({
             template:'./public/index.html',
-            filename:'/index.html'
+            filename:'./index.html'
         }),
         new miniCssExtractPlugin({
             filename:'[name].css'
