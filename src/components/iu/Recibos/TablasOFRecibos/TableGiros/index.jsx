@@ -27,7 +27,6 @@ export default function TableGiros({ type, receiptsAll , loading }) {
             <td>{r.date}</td>
             <td>{r.state ? "Completado" : "Pendiente"}</td>
             <td>{r.user.nickname}</td>
-            <td>{r.user.nickname}</td>
           </RowRecibo>
         ))}
       </tbody>
