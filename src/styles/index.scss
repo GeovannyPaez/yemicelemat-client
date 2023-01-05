@@ -1,0 +1,53 @@
+@use './loadingSkeletonsTable';
+@use './containerDataReceipts';
+.nav-link{
+    line-height: 54px;
+}
+body {
+    background-color: rgb(232, 232, 232);
+}
+.btn-dark{
+    border: 1px solid;
+}
+table{
+    thead{
+        th{
+            text-align: center;
+        }
+    }
+    tbody{
+        tr{
+            cursor: pointer;
+            text-align: center;
+        }
+    }
+}
+#formFileSm{
+    display: none;
+}
+.row p{
+    margin-bottom: 3px;
+}
+.detailReceipt {
+    img{
+        height: 450px;
+    }
+}
+.cardTypeReceipt {
+    img{
+        height: 230px;
+        
+    }
+}
+.carouselContainer{
+   img{
+    height: 80vh;
+   }
+   .carousel-caption{
+    background: linear-gradient(90deg, rgba(175,175,175,0.6955824566154587) 100%, rgba(175,175,175,0) 100%, rgba(108,104,240,1) 7041%);
+   }
+   .carousel-control-next-icon, .carousel-control-prev-icon{
+    display: none;
+   }
+   
+}

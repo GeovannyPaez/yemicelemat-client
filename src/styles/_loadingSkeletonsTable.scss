@@ -1,0 +1,22 @@
+.skeletonTableContainer{
+    // background-color: gray;
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    height: 200px;
+    @keyframes loading {
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    tr{
+        cursor: auto;
+    }
+}
