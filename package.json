@@ -1,7 +1,7 @@
 {
-  "name": "emiliycelemat",
+  "name": "yemicelemat",
   "version": "1.0.0",
-  "description": "'App para hacer pagos en diferentes servisios'",
+  "description": "'App para hacer pagos en diferentes servicios'",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.dev.js",
