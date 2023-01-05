@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useContext } from "react";
 import { Alert, Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../context/userContext";
+import { UserContext } from "../context/UserContext";
 
 export const Login = () => {
   const Form = useRef(null);
