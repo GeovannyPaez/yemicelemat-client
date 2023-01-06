@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useReceiptApi } from "../../../../../hooks/useReceiptApi";
+import { changeNumberToMoney } from "../../../../../services/chageNumberToMoney";
 import { BodyTableSkeleton } from "../../../../skeletons/BodyTableSkeleton";
 import { headVenezuela } from "../headsTables";
 import { RowRecibo } from "../TablasRecargas/Row-Recibo";
@@ -24,8 +25,8 @@ export default function TableVenezuela({ type, receiptsAll , loading }) {
             <td>{r.numAccount}</td>
             <td>{r.bench}</td>
             <td>{r.typeAccount}</td>
-            <td>{r.value}</td>
-            <td>{r.comicion}</td>
+            <td>{changeNumberToMoney(r.value)}</td>
+            <td>{changeNumberToMoney(r.comicion)}</td>
             <td>{r.date}</td>
             <td>{r.state ? "Completado" : "Pendiente"}</td>
             <td>{r.user.nickname}</td>
