@@ -22,8 +22,8 @@ export default function TableGiros({ type, receiptsAll , loading }) {
             <td>{r.ccReceptor}</td>
             <td>{r.destino}</td>
             <td>{r.entidad}</td>
-            <td>{r.value}</td>
-            <td>{r.comicion}</td>
+            <td>{changeNumberToMoney(r.value)}</td>
+            <td>{changeNumberToMoney(r.comicion)}</td>
             <td>{r.date}</td>
             <td>{r.state ? "Completado" : "Pendiente"}</td>
             <td>{r.user.nickname}</td>

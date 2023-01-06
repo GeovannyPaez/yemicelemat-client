@@ -16,8 +16,8 @@ export default function TableCelular({ type, receiptsAll , loading }) {
             <td>{r.typeReceipt}</td>
             <td>{r.numPhone}</td>
             <td>{r.operador}</td>
-            <td>{r.value}</td>
-            <td>{r.comicion}</td>
+            <td>{changeNumberToMoney(r.value)}</td>
+            <td>{changeNumberToMoney(r.comicion)}</td>
             <td>{r.date}</td>
             <td>{r.state ? "Completado" : "Pendiente"}</td>
             <td>{r.user.nickname}</td>
