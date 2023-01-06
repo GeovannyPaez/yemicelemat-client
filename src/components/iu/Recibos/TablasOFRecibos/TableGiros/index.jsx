@@ -22,7 +22,7 @@ export default function TableGiros({ type, receiptsAll , loading }) {
             <td>{r.ccReceptor}</td>
             <td>{r.destino}</td>
             <td>{r.entidad}</td>
-            <td>{changeNumberToMoney(r.value)}</td>
+            <td>{changeNumberToMoney(Number(r.value))}</td>
             <td>{changeNumberToMoney(r.comicion)}</td>
             <td>{r.date}</td>
             <td>{r.state ? "Completado" : "Pendiente"}</td>

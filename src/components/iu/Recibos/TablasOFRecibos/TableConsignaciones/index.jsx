@@ -18,7 +18,7 @@ export default function TableConsignaciones({ type, receiptsAll , loading }) {
           <td>{r.numAccount}</td>
           <td>{r.name}</td> 
           <td>{r.bench}</td>
-          <td>{changeNumberToMoney(r.value)}</td>
+          <td>{changeNumberToMoney(Number(r.value))}</td>
             <td>{changeNumberToMoney(r.comicion)}</td>
           <td>{r.date}</td>
           <td>{r.state?'Completado':'Pendiente'}</td>

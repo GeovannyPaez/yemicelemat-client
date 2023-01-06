@@ -20,7 +20,7 @@ export default function TablePines({ type, receiptsAll , loading }) {
           <td>{r.name}</td>
           <td>{r.email}</td>
           <td>{r.entidad}</td>
-          <td>{changeNumberToMoney(r.value)}</td>
+          <td>{changeNumberToMoney(Number(r.value))}</td>
             <td>{changeNumberToMoney(r.comicion)}</td>
           <td>{r.date}</td>
           <td>{r.state?'Completado':'Pendiente'}</td>
