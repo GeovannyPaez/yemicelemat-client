@@ -1,4 +1,5 @@
 import React from "react";
+import { changeNumberToMoney } from "../../../../../services/chageNumberToMoney";
 import { BodyTableSkeleton } from "../../../../skeletons/BodyTableSkeleton";
 import { headConsignaciones } from "../headsTables";
 import { RowRecibo } from "../TablasRecargas/Row-Recibo";
@@ -15,7 +16,7 @@ export default function TableConsignaciones({ type, receiptsAll , loading }) {
           <th scope="row">{r.id}</th>
           <td>{r.typeReceipt}</td>
           <td>{r.numAccount}</td>
-          <td>{r.name}</td>
+          <td>{r.name}</td> 
           <td>{r.bench}</td>
           <td>{changeNumberToMoney(r.value)}</td>
             <td>{changeNumberToMoney(r.comicion)}</td>

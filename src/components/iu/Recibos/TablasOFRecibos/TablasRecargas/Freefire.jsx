@@ -3,7 +3,7 @@ import TableHead from "./TableHead";
 import { RowRecibo } from "./Row-Recibo";
 import { headFreefire } from "../headsTables";
 import { BodyTableSkeleton } from "../../../../skeletons/BodyTableSkeleton";
-
+import { changeNumberToMoney } from "../../../../../services/chageNumberToMoney";
 
 export default function TableFreefire({ type, receiptsAll , loading }) {
   

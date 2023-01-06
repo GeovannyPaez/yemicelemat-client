@@ -4,9 +4,9 @@ import TableHead from "./TableHead";
 import { RowRecibo } from "./Row-Recibo";
 import {headPines } from "../headsTables";
 import { BodyTableSkeleton } from "../../../../skeletons/BodyTableSkeleton";
+import { changeNumberToMoney } from "../../../../../services/chageNumberToMoney";
 
 export default function TablePines({ type, receiptsAll , loading }) {
-  
   return (
     <>
       <TableHead theads={headPines} />

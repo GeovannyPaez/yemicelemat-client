@@ -3,8 +3,9 @@ import TableHead from "./TableHead";
 import { RowRecibo } from "./Row-Recibo";
 import {headCelular } from "../headsTables";
 import { BodyTableSkeleton } from "../../../../skeletons/BodyTableSkeleton";
+import { changeNumberToMoney } from "../../../../../services/chageNumberToMoney";
 export default function TableCelular({ type, receiptsAll , loading }) {
-  
+
   return (
     <>
       <TableHead theads={headCelular} />

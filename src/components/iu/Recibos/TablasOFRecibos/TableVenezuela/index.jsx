@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useReceiptApi } from "../../../../../hooks/useReceiptApi";
+import React from "react";
 import { changeNumberToMoney } from "../../../../../services/chageNumberToMoney";
 import { BodyTableSkeleton } from "../../../../skeletons/BodyTableSkeleton";
 import { headVenezuela } from "../headsTables";
