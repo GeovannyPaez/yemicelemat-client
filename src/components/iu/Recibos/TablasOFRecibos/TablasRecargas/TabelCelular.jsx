@@ -4,6 +4,7 @@ import { RowRecibo } from "./Row-Recibo";
 import {headCelular } from "../headsTables";
 import { BodyTableSkeleton } from "../../../../skeletons/BodyTableSkeleton";
 import { changeNumberToMoney } from "../../../../../services/chageNumberToMoney";
+import parseDate from "../../../../../services/formatToDate";
 export default function TableCelular({ type, receiptsAll , loading }) {
 
   return (
@@ -19,7 +20,7 @@ export default function TableCelular({ type, receiptsAll , loading }) {
             <td>{r.operador}</td>
             <td>{changeNumberToMoney(Number(r.value))}</td>
             <td>{changeNumberToMoney(r.comicion)}</td>
-            <td>{r.date}</td>
+            <td>{parseDate(r.date)}</td>
             <td>{r.state ? "Completado" : "Pendiente"}</td>
             <td>{r.user.nickname}</td>
           </RowRecibo>

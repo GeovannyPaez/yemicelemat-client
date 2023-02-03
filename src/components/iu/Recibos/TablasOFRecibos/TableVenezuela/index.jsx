@@ -1,5 +1,6 @@
 import React from "react";
 import { changeNumberToMoney } from "../../../../../services/chageNumberToMoney";
+import parseDate from "../../../../../services/formatToDate";
 import { BodyTableSkeleton } from "../../../../skeletons/BodyTableSkeleton";
 import { headVenezuela } from "../headsTables";
 import { RowRecibo } from "../TablasRecargas/Row-Recibo";
@@ -26,7 +27,7 @@ export default function TableVenezuela({ type, receiptsAll , loading }) {
             <td>{r.typeAccount}</td>
             <td>{changeNumberToMoney(Number(r.value))}</td>
             <td>{changeNumberToMoney(r.comicion)}</td>
-            <td>{r.date}</td>
+            <td>{parseDate(r.date)}</td>
             <td>{r.state ? "Completado" : "Pendiente"}</td>
             <td>{r.user.nickname}</td>
           </RowRecibo>

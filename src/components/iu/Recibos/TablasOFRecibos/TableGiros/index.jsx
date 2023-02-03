@@ -1,6 +1,7 @@
 
 import React from "react";
 import { changeNumberToMoney } from "../../../../../services/chageNumberToMoney";
+import parseDate from "../../../../../services/formatToDate";
 
 import { BodyTableSkeleton } from "../../../../skeletons/BodyTableSkeleton";
 import { headGiros } from "../headsTables";
@@ -24,7 +25,7 @@ export default function TableGiros({ type, receiptsAll , loading }) {
             <td>{r.entidad}</td>
             <td>{changeNumberToMoney(Number(r.value))}</td>
             <td>{changeNumberToMoney(r.comicion)}</td>
-            <td>{r.date}</td>
+            <td>{parseDate(r.date)}</td>
             <td>{r.state ? "Completado" : "Pendiente"}</td>
             <td>{r.user.nickname}</td>
           </RowRecibo>

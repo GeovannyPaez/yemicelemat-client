@@ -4,7 +4,8 @@ import React, { useEffect } from 'react'
 export default function useLocalStorage(key,initialValue) {
     const getItem=()=>{
         let storage = localStorage.getItem(key);
-        if(!storage || storage === undefined){
+        
+        if(!storage || storage === "undefined"){
             localStorage.removeItem(key)
             return null 
         }else{

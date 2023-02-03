@@ -6,6 +6,7 @@ import { BodyVenezuela } from "./bodyVenezuela";
 import { BodyConsignaciones } from "./bodyConsignaciones";
 import { BodyGiros } from "./bodyGiros";
 import { changeNumberToMoney } from "../../services/chageNumberToMoney";
+import parseDate from "../../services/formatToDate";
 
 export const DetailRecibo = ({ receipt, viewState }) => {
   const values = returnBodyRecibo(receipt);
@@ -27,7 +28,7 @@ export const DetailRecibo = ({ receipt, viewState }) => {
         {values}
         {receipt.date && <p>
           <strong>Fecha: </strong>
-          {receipt.date}
+          {parseDate(receipt.date)}
         </p>}
         {viewState && (
           <p>
