@@ -73,7 +73,7 @@ export const useReceiptApi = (typeReceipt = null) => {
     try {
       const res = await ReceiptServices.getOneReceipt({ path, id });
       setReceipt(res);
-      console.log(res)
+      // console.log(res)
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -84,7 +84,7 @@ export const useReceiptApi = (typeReceipt = null) => {
   const updateReceipt=async({path,id,payload})=>{
     try {
        const res= await ReceiptServices.updateReceipt({path,id,payload});
-       console.log(res);
+      //  console.log(res);
        setLoading(false)
        setRefresh(true);
     } catch (error) {
@@ -108,7 +108,7 @@ export const useReceiptApi = (typeReceipt = null) => {
         state:true      
       }
     }
-    console.log('se inicio la subida del vouvher')
+    // console.log('se inicio la subida del vouvher')
     await updateReceipt(params)
    } catch (error) {
     console.log(error)

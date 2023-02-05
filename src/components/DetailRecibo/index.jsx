@@ -25,11 +25,13 @@ export const DetailRecibo = ({ receipt, viewState }) => {
           <strong>Telefono: </strong>
           {receipt.numPhone}
         </p>
-        {values}
-        {receipt.date && <p>
-          <strong>Fecha: </strong>
-          {parseDate(receipt.date)}
-        </p>}
+        {values} 
+        {receipt.date && (
+          <p>
+            <strong>Fecha: </strong>
+            {parseDate(receipt.date)}
+          </p>
+        )}
         {viewState && (
           <p>
             <strong>Estado: </strong>
@@ -46,7 +48,9 @@ export const DetailRecibo = ({ receipt, viewState }) => {
         </p>
         <p>
           <strong>Total Pagar: </strong>
-          {changeNumberToMoney(Number(receipt.value) + Number(receipt.comicion))}
+          {changeNumberToMoney(
+            Number(receipt.value) + Number(receipt.comicion)
+          )}
         </p>
       </div>
     </div>

@@ -1,51 +1,55 @@
+
 @use './loadingSkeletonsTable';
 @use './containerDataReceipts';
+@use './navbar';
+@use './table';
+@use './accordion';
+@use './detailReceipt';
+@use './form';
+@use './buttoms';
+@import './vars';
+
 .nav-link{
     line-height: 54px;
 }
 body {
-    background-color: rgb(232, 232, 232);
+    background-color:     $bg-body;
+    font-family:$comic ;
 }
-.btn-dark{
-    border: 1px solid;
-}
-table{
-    thead{
-        th{
-            text-align: center;
-        }
-    }
-    tbody{
-        tr{
-            cursor: pointer;
-            text-align: center;
-        }
-    }
-}
+
+// input file
 #formFileSm{
     display: none;
 }
+//rowss
 .row p{
     margin-bottom: 3px;
 }
-.detailReceipt {
-    img{
-        height: 450px;
-    }
-}
+
+
 .cardTypeReceipt {
     img{
         height: 230px;
         
     }
 }
+
+// carousel
 .carouselContainer{
    img{
     height: 80vh;
+    border-radius: 10px;
    }
-   .carousel-caption{
-    background: linear-gradient(90deg, rgba(175,175,175,0.6955824566154587) 100%, rgba(175,175,175,0) 100%, rgba(108,104,240,1) 7041%);
-   }
+    .carousel-caption {
+    background: $bg-carouser-caption;
+    color: $color-font-primary;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    h3 {
+        color: $color-primary;
+        font-weight: 800;
+    }
+}
    .carousel-control-next-icon, .carousel-control-prev-icon{
     display: none;
    }
