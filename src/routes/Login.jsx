@@ -32,7 +32,7 @@ export const Login = () => {
   return (
     <div className="container mt-5">
       <div className="row">
-        <div className="col">
+        <div className="col-12 col-md-7 m-auto">
           <form ref={Form} onSubmit={onSutbmit}>
             <div className="form-floating mb-3">
               <input
