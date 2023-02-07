@@ -13,6 +13,7 @@ import { Registro } from "../routes/Registro";
 import { RecoveyPassword } from "../routes/RecoveyPassword";
 import { ChangePassword } from "../routes/ChangePassword";
 import { UserContextProvider } from "../context/UserContext";
+import FormRetiros from "./iu/Form/FormRetiros";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
               <Route path="/" element={<AppRecibos/>} />
               <Route path="/recibos/:type" element={<ContainerRecibos/>}  />
               <Route path="/add-recibo" element={<Form/>} />
+              <Route path="/add-retiro" element={<FormRetiros/>}/>
               <Route path="/ver-recibo" element={<Giros/>} />
               {/* <Route path='/venezuela'element={<Venezuela/>}/> */}
               <Route path="/view-recibo/:receipt" element={<ViewDetailRecibo />} />

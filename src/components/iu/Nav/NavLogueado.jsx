@@ -18,21 +18,23 @@ export const NavLogueado = ({onLogout}) => {
           Pines
         </NavDropdown.Item>
       </NavDropdown>
-      <Nav.Link href="#/recibos/consignaciones">
-        {/* <NavLink
-        to={'consignaciones'}
-        >
-          Conignaciones 
-        </NavLink> */}
-        Consignaciones
-      </Nav.Link>
+      <NavDropdown title="Consignaciones" id="basic-nav-dropdown">
+        <NavDropdown.Item href="#/recibos/consignaciones" >
+          Consignaciones
+        </NavDropdown.Item>
+        <NavDropdown.Item href="#/recibos/retiros">
+          Retiros
+        </NavDropdown.Item>
+      </NavDropdown>
       <Nav.Link href="#/recibos/giros">Giros</Nav.Link>
       <Nav.Link eventKey={2} href="#/recibos/venezuela">
         Venezuela
       </Nav.Link>
-      {!user.admin && <Nav.Link href="#/add-recibo">
+      {!user.admin ? <Nav.Link href="#/add-recibo">
         <ButtomViewForm />
-      </Nav.Link>}
+      </Nav.Link>: <Nav.Link href="#/add-retiro">
+          <Button>Crear Retiro</Button>
+        </Nav.Link>}
       <NavDropdown title={user.nickname} id="basic-nav-dropdown">
       {user.admin &&<NavDropdown.Item href="#/registro" >
             <Button variant='primary'>

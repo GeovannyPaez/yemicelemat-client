@@ -16,6 +16,7 @@ export function ViewDetailRecibo() {
       return;
     }
     getOne({ path, id });
+    console.log(path, id)
     setRefresh(false)
   }, [id,refresh]);
   const onDeleteReceipt=()=>{

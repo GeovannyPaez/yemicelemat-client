@@ -3,7 +3,7 @@ import ReactToPrint from "react-to-print";
 import { Button } from "react-bootstrap";
 import { DetailRecibo } from "../DetailRecibo";
 import { ComponetToPrint } from "./ComponentToPrint";
-
+import { DetailRetiro } from "../DetailRetiro";
 export const PrintReceipt = ({ recibo }) => {
   let componeteRef = useRef();
   return (
@@ -17,7 +17,12 @@ export const PrintReceipt = ({ recibo }) => {
 
       <div style={{ display: "none" }}>
         <ComponetToPrint ref={(el) => (componeteRef = el)}>
-          <DetailRecibo viewState={false} receipt={recibo}/>
+        {recibo.typeReceipt.toLowerCase() ==  "retiros" ? (
+            <DetailRetiro receipt={recibo}  viewState={false}/>
+          ) : (
+            <DetailRecibo receipt={recibo} viewState={false} />
+            
+          )}
         </ComponetToPrint>
       </div>
     </>

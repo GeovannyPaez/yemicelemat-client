@@ -28,13 +28,23 @@ export const useReceiptApi = (typeReceipt = null) => {
     
     ReceiptServices.getReceipts( typeReceipt, options )
       .then((res) => {
+        let newInfoReceipts;
         setReceiptsAll(res.receipts);
-        const newInfoReceipts={
-          sumVentas:res.sumVentas,
-          sumComicion: res.sumComicion,
-          sumTotal:res.dinnerTotal
+
+        if(typeReceipt.toLowerCase() === 'retiros'){
+          newInfoReceipts = {
+            sumComicion:res.sumComicion,
+            sumDelivered:res.sumDelivered,
+            sumReceived:res.sumReceived
+          }
+        } else {
+          newInfoReceipts={
+            sumVentas:res.sumVentas,
+            sumComicion: res.sumComicion,
+            sumTotal:res.dinnerTotal
+          }
         }
-      
+        
         setInfoReceipts(newInfoReceipts)
         setLoading(false)
       })

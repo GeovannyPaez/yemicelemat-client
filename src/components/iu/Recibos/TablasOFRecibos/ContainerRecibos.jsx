@@ -11,6 +11,8 @@ import { AcordionInfo } from "../../../InfoReceipts/AcordionInfo";
 import { Search } from "../../Form/Search";
 import { SplitButtonFilter } from "../../Buttons/SplitButtonFilter";
 import { NotFountReceipts } from "../../NotFounts/NotFountReceipts";
+import TableRetiros from "./TableRetiros";
+import { AccordionInfoRetiros } from "../../../InfoReceipts/AccordionInfoRetiros";
 
 
 export default function ContainerRecibos() {
@@ -33,11 +35,12 @@ export default function ContainerRecibos() {
         {type==='venezuela'&& <TableVenezuela type={type} receiptsAll={receiptsAll} loading={loading}/>}
         {type==='giros'&& <TableGiros type={type} receiptsAll={receiptsAll} loading={loading}/>}
         {type==='consignaciones'&& <TableConsignaciones type={type} receiptsAll={receiptsAll} loading={loading}/>}
-       
+        {type ==='retiros' && <TableRetiros loading={loading} receiptsAll={receiptsAll} type={type}/>
+        }
       </table>
       {receiptsAll.length ===0 && <NotFountReceipts/>}
     </div>
-      <AcordionInfo infoReceipts={infoReceipts} loading={loading}/>
+      {type === 'retiros' ?<AccordionInfoRetiros loading={loading} infoReceipts={infoReceipts}/> :<AcordionInfo infoReceipts={infoReceipts} loading={loading}/>}
     </>
   );
 }

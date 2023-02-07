@@ -84,6 +84,18 @@ const headVenezuela=
         'Estado',
         "Usuario"
     ];
+    const headRetiros = [
+        '#',
+        'Tipo Recibo',
+        'Banco',
+        'N. Recibo',
+        'Toltal Recibido',
+        'Total Entregado',
+        'Fecha',
+        "Estado",
+        "Usuario"
+
+    ]
 export{
-    headConsignaciones,headGiros,headVenezuela,headCelular,headFreefire,headPines
+    headConsignaciones,headGiros,headVenezuela,headCelular,headFreefire,headPines,headRetiros
 }
