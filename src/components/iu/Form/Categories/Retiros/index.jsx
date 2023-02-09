@@ -47,6 +47,16 @@ export const Retiros = () => {
         />
         <label htmlFor="totalDelivered">Total Entregado</label>
       </div>
+      <div className="form-floating mb-3">
+        <input
+          required
+          type="date"
+          className="form-control"
+          name="date"
+          placeholder="12/12/2022"
+        />
+        <label htmlFor="date">Fecha</label>
+      </div>
     </>
   );
 };
