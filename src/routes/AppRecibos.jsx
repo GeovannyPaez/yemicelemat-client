@@ -7,7 +7,7 @@ function IndividualIntervalsExample() {
     <Carousel className='mt-4 carouselContainer'>
       <Carousel.Item interval={3000}>
         <img
-          className="d-block m-auto"
+          className="d-block m-auto w-100"
           src="https://res.cloudinary.com/dad87vqdp/image/upload/v1675526902/la-caba%C3%B1a/logoAdri_b4ig3w.png" alt="logo la cabaña"
         />
       </Carousel.Item>
