@@ -2,6 +2,7 @@ const path = require('path');
 const htmlWebpackPlugin= require('html-webpack-plugin');
 const miniCssExtractPlugin= require('mini-css-extract-plugin');
 const Dotevn= require('dotenv-webpack');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports={
     entry:'./src/index.js',
@@ -50,7 +51,25 @@ module.exports={
             filename:'[name].css'
         }),
         new Dotevn(),
-        
+        new WebpackPwaManifest({
+            name:"Multicervicios Yemicelmat",
+            short_name:"Yemicelemat",
+            description:"Multiservicios Yemicelemat, es una aplicación que te ayudara a pagar cualquier tipo de factura en internet, ademas puedes hacer recargas a todos los operadores disponibles, consignaciones a cualquier banco de Colombia, entre muchas cosas mas.",
+            icons:[
+                {
+                    src: path.resolve('./src/assets/icon-ym.png'),
+                    sizes:'512x512',
+                    type:'image/png'
+                }
+            ],
+            start_url:'/',
+            scope:'/',
+            display:'standalone',
+            theme_color:"#e8cfc1",
+            background_color:"#fff9f5",
+            related_applications:[],
+            prefer_related_applications:false
+        })
     ],
     optimization:{
         minimize:true
