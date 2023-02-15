@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 function IndividualIntervalsExample() {
   return (
-    <Carousel className='mt-4 carouselContainer'>
+    <Carousel className='carouselContainer'>
       <Carousel.Item interval={3000}>
         <img
           className="d-block w-100 m-auto"
@@ -39,7 +39,7 @@ function IndividualIntervalsExample() {
       <Carousel.Item interval={3000}>
         <img
           className="d-block w-100"
-          src="http://mlm-s2-p.mlstatic.com/650826-MLM40260861599_122019-O.jpg"
+          src="https://th.bing.com/th/id/OIP.V-RgqmfSze_T0zO0CD-7vgHaHa?pid=ImgDet&dpr=2"
           alt="First slide"
         />
         <Carousel.Caption>

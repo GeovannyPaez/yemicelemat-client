@@ -70,11 +70,13 @@ module.exports = {
     }),
     new WorkboxWebpackPlugin.GenerateSW({
         mode:'production',
+        clientsClaim: true,
+        skipWaiting: true,
       runtimeCaching: [
         
         {
           urlPattern: /^https?.*/, //regg url to cached
-          handler: "CacheFirst", //stretegies,
+          handler: "NetworkFirst", //stretegies,
           method:'GET',
           options: {
             cacheName: "peticiones", //name of cache

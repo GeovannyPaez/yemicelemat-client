@@ -20,9 +20,10 @@ export default function App() {
     <HashRouter>
       <UserContextProvider>
           <NavbarApp />
-          <div className="container mt-1 mb-4">
+         
             <Routes>
               <Route path="/" element={<AppRecibos/>} />
+              
               <Route path="/recibos/:type" element={<ContainerRecibos/>}  />
               <Route path="/add-recibo" element={<Form/>} />
               <Route path="/add-retiro" element={<FormRetiros/>}/>
@@ -35,7 +36,7 @@ export default function App() {
               <Route path="/change-password/:token" element={<ChangePassword/>}/>
               <Route path="*" element={<p>Not Fount</p>} />
             </Routes>
-          </div>
+          
       </UserContextProvider>
     </HashRouter>
   );
