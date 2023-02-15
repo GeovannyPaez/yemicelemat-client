@@ -70,10 +70,35 @@ module.exports = {
     }),
     new WorkboxWebpackPlugin.GenerateSW({
         mode:'production',
-        clientsClaim: true,
-        skipWaiting: true,
+        clientsClaim: true, // Esta opción asegura que el nuevo service worker toma el control inmediato de todas las pestañas de la aplicación abiertas. De esta manera, cualquier actualización realizada en el service worker se aplicará inmediatamente a todas las pestañas abiertas de la aplicación.,
+        skipWaiting: true ,//Esta opción asegura que el nuevo service worker se instala y se activa inmediatamente en lugar de esperar a que el usuario cierre la aplicación. Esto es importante para asegurarse de que la aplicación siempre se cargue con la versión más actualizada del service worker,
       runtimeCaching: [
-        
+        //caching of Google Fonts 
+      {
+        urlPattern:/^https:\/\/fonts.(?:googleapis|gstatic).com\/(.*)/,//fonts of Google
+        handler:'CacheFirst',
+        method:"GET",
+        options:{
+          cacheName:'Google Fonst',
+          expiration: {
+            maxAgeSeconds: 30*24*60*60
+          }
+        }
+      },
+      {
+        urlPattern:new RegExp('^https://.*\.(png|jpg|jpeg|gif|webp)$'),
+        handler:'CacheFirst',
+        options:{
+          cacheName:'Images',
+          expiration:{
+            maxEntries:10,
+            maxAgeSeconds: 30*24*60*60 //un mes
+          }
+        }
+      },
+
+
+      //caching  all reques https:
         {
           urlPattern: /^https?.*/, //regg url to cached
           handler: "NetworkFirst", //stretegies,
