@@ -14,7 +14,7 @@ https://yemicelemat.netlify.app/#/login
 
 **Client:** React, Bootstrap, React-Bootstrap, Webpack, Sass 
 
-**Server:** Node, Express, Sequelize, PostgresSQL
+**Server:** Node, Express, Sequelize, PostgreSQL
  
   - [Repository API-REST](https://github.com/GeovannyPaez/yemicelemat)
 
