@@ -16,7 +16,7 @@ https://yemicelemat.netlify.app/#/login
 
 **Server:** Node, Express, Sequelize, PostgreSQL
  
-  - [Repository API-REST](https://github.com/GeovannyPaez/yemicelemat)
+  - [Repository API-REST](https://github.com/GeovannyPaez/yemicelemat/tree/main)
 
 
 ## Features
